@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+        <!-- Always Refuel all turrets -->
+        
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[thingClass="Building_TurretGun"]/comps/li[@Class = "CompProperties_Refuelable"]/autoRefuelPercent</xpath>
+                    <value>
+                        <autoRefuelPercent>0.99</autoRefuelPercent>
+                    </value>
+            </li>
+			
+		<!-- Always Refuel Autocannon Turret -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Turret_Autocannon"]/comps/li[@Class = "CompProperties_Refuelable"]/autoRefuelPercent</xpath>
+					<value>
+						<autoRefuelPercent>0.99</autoRefuelPercent>
+					</value>
+			</li>
+			
+	<!-- Always Refuel Sniper Turret -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Turret_Sniper"]/comps/li[@Class = "CompProperties_Refuelable"]/autoRefuelPercent</xpath>
+					<value>
+						<autoRefuelPercent>0.99</autoRefuelPercent>
+					</value>
+			</li>
+			
+            <!-- Vanilla Security - Charge Rail Gun -->
+			
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeRailgunTurret"]</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeRailgunTurret"]/comps/li[@Class = "CompProperties_Refuelable"]/autoRefuelPercent</xpath>
+                    <value>
+                        <autoRefuelPercent>0.75</autoRefuelPercent>
+                    </value>
+                </match>
+			</li>
+			
+        </operations>
+    </Operation>
+	
+</Patch>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+
+	<!-- Always Refuel Mini Turret -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Turret_MiniTurret"]/comps/li[@Class = "CompProperties_Refuelable"]/autoRefuelPercent</xpath>
+					<value>
+						<autoRefuelPercent>0.99</autoRefuelPercent>
+					</value>
+			</li>
+			
+	<!-- Always Refuel Autocannon Turret -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Turret_Autocannon"]/comps/li[@Class = "CompProperties_Refuelable"]/autoRefuelPercent</xpath>
+					<value>
+						<autoRefuelPercent>0.99</autoRefuelPercent>
+					</value>
+			</li>
+			
+	<!-- Always Refuel Sniper Turret -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Turret_Sniper"]/comps/li[@Class = "CompProperties_Refuelable"]/autoRefuelPercent</xpath>
+					<value>
+						<autoRefuelPercent>0.99</autoRefuelPercent>
+					</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+</Patch>
