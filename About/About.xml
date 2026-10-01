@@ -17,6 +17,8 @@
 	</supportedVersions>
 	<description>Turrets will be rearmed even if they are 99% full of ammo.</description>
 	<loadAfter>
+		<li>vanillaexpanded.gravship</li>
+		<li>vanillaexpanded.gravship2</li>
 		<li>VanillaExpanded.VFEA</li>
 		<li>VanillaExpanded.VFESecurity</li>
 	</loadAfter>
